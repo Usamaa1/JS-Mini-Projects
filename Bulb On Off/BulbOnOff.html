@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb On Off</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            height: 500px;
+        }
+        .btn1, .btn2{
+            padding: 10px 30px;
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            color: aliceblue;
+            background-color: #3F51B5;
+            margin: 0 15px;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn1:active, .btn2:active{
+            font-size: 14px;
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id = "bulb" src="bulb off.jpg" alt="Bulb On" width="300px" height="300px">
+    </div>
+    <div class="btn-container">
+    <button class = "btn1" onclick="light(1)">ON</button>
+        <button class = "btn2" onclick="light(0)">OFF</button>
+    </div>
+<script>
+    function light(value){
+        var pic;
+        if(value == 0){
+            pic = "bulb off.jpg";
+        }else{
+            pic = "bulb on.jpg";
+        }
+        document.getElementById('bulb').src  = pic;
+    }
+</script>    
+</body>
+</html>
