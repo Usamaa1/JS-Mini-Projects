@@ -25,6 +25,7 @@ body{
     background-color: #111;
     cursor: pointer;
 }
+
 .original-image{
     position: absolute;
     left: 0;
